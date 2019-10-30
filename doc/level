@@ -1,0 +1,28 @@
+//**************************
+// Calculo do score
+n_lines_destroyed += n_lines;
+        switch (n_lines)
+        {
+        case 0:
+            break;
+        case 1:
+            score += 40 * level;
+            break;
+        case 2:
+            score += 100 * level;
+            break;
+        case 3:
+            score += 300 * level;
+            break;
+        case 4:
+            score += 1200 * level;
+            break;
+}
+//*********************
+// Calculo do tempo
+// Result: 880  680  530  418
+        for (int level = 1; level <= 4; level++) {
+            int timestep = (int) Math.round(80 + 800.0 * Math.pow(0.75, level - 1));
+            timestep = Math.max(10, timestep);
+            System.out.print(timestep + "  ");
+        }
